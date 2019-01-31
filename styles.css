@@ -244,7 +244,7 @@ li a {
     padding-left: 100px;
     padding-right: 60px;
     scroll-snap-type: y mandatory;
-    scrollbar-width: none; /* workaround for firefox hidden scrollbar */
+    overflow-x: hidden;
   }::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
