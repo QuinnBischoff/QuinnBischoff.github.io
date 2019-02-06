@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="calculator.css" />
+
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="card container bg-light">
+      <div class="row mt-2 non-collapse">
+        <div class="col-md-4"></div>
+        <div class="col-md-8 text-right">
+            <h2 id="result"></h2>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-12">
+          <form name="screen">
+            <input type="text" id="calculation" class="form-control text-right" readonly/>
+          </form>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="clear" class="btn btn-danger btn-block">
+            AC
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="(" class="btn btn-warning btn-block input-button">
+            (
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id=")" class="btn btn-warning btn-block input-button">
+            )
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="/" class="btn btn-warning btn-block input-button">
+            /
+          </button>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="7" class="btn btn-primary btn-block input-button">
+            7
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="8" class="btn btn-primary btn-block input-button">
+            8
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="9" class="btn btn-primary btn-block input-button">
+            9
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="*" class="btn btn-warning btn-block input-button">
+            X
+          </button>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="4" class="btn btn-primary btn-block input-button">
+            4
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="5" class="btn btn-primary btn-block input-button">
+            5
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="6" class="btn btn-primary btn-block input-button">
+            6
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="-" class="btn btn-warning btn-block input-button">
+            -
+          </button>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="1" class="btn btn-primary btn-block input-button">
+            1
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="2" class="btn btn-primary btn-block input-button">
+            2
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="3" class="btn btn-primary btn-block input-button">
+            3
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="+" class="btn btn-warning btn-block input-button">
+            +
+          </button>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="0" class="btn btn-primary btn-block input-button">
+            0
+          </button>
+        </div>
+        <div class="col-md-3 col-sm-3 col-3">
+          <button type="button" id="." class="btn btn-primary btn-block input-button">
+            .
+          </button>
+        </div>
+        <div class="col-md-6 col-sm-6 col-6">
+          <button type="button" id="submit" class="btn btn-success btn-block ">
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery, Bootstrap JS, My Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="calculator.js"></script>
+  </body>
+</html>
