@@ -41,7 +41,7 @@ const socialMediaLinks = {
 // Skills Section
 
 const skillsSection = {
-  title: "Tech I've Worked With",
+  title: "Tech I've Used",
   subTitle: "",
   skills: [
     emoji(
@@ -49,7 +49,7 @@ const skillsSection = {
     ),
     emoji("⚡ Deployment of solutions on AWS, AZURE AND GCP platforms"),
     emoji(
-      "⚡ Experience creating automated testing and build pipelines"
+      "⚡ Automated testing and build pipelines with Jenkins"
     )
   ],
 
