@@ -139,7 +139,7 @@ const workExperiences = {
       role: "Software Engineer I & II",
       company: "Garmin",
       companylogo: require("./assets/images/grmnpng.png"),
-      date: "2019 – Sep 2022",
+      date: "2019 – 2022",
       desc: "Designed, developed, and tested software for the best cycling power meters on the market, as well as various other Garmin products",
       descBullets: [
         "Developed space and power efficient software for sensors with embedded C",
