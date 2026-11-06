@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spunto | Quinn Bischoff</title>
+    <meta name="description" content="The engineering behind Spunto: a shared React Native and web application, Supabase-backed state, and calendar-date correctness.">
+    <meta name="theme-color" content="#faf9f6">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quinnbischoff.github.io/projects/spunto/">
+    <meta property="og:title" content="Spunto | Quinn Bischoff">
+    <meta property="og:description" content="Tasks and calendar, together.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Spunto | Quinn Bischoff">
+    <meta name="twitter:description" content="Tasks and calendar, together.">
+    <link rel="canonical" href="https://quinnbischoff.github.io/projects/spunto/">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg?v=qb-2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=qb-2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=qb-2">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=qb-2">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/static/css/portfolio.css">
+    <script src="/static/js/project-navigation.js"></script>
+    <script src="/static/js/project-videos.js" defer></script>
+  </head>
+  <body class="project-spunto">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header page-width">
+      <a class="wordmark" href="/" aria-label="Quinn Bischoff, home">Quinn Bischoff<span aria-hidden="true">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="/#personal-projects">All projects</a>
+        <a class="contact-link" href="/#contact">Let's connect <span aria-hidden="true">&nearr;</span></a>
+      </nav>
+    </header>
+    <main class="project-main page-width" id="main">
+      <a class="text-link project-back" href="/#personal-projects"><span aria-hidden="true">&larr;</span> All projects</a>
+      <div class="project-hero">
+        <header class="project-intro">
+          <p class="eyebrow">Personal project &middot; Productivity</p>
+          <h1>Spunto</h1>
+          <p class="project-lead">Tasks and calendar, together.</p>
+          <p class="project-summary">A React Native and Expo application bringing tasks, events, and habits into one workspace. The engineering centers on shared data across views, Supabase-backed persistence, and getting calendar dates right.</p>
+        </header>
+        <div class="project-visual">
+          <div class="project-clip project-demo-cover">
+            <video controls muted playsinline preload="none" width="1440" height="1000" poster="/static/media/projects/spunto/posters/01-daily-planning.webp" aria-label="Spunto daily workspace: completing a habit, opening a task, and checking off a subtask">
+              <source src="/static/media/projects/spunto/videos/01-daily-planning.mp4" type="video/mp4">
+              <source src="/static/media/projects/spunto/videos/01-daily-planning.webm" type="video/webm">
+              <a href="/static/media/projects/spunto/videos/01-daily-planning.mp4">Download the daily planning recording.</a>
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="project-overview">
+        <dl class="project-facts">
+          <div><dt>Platform</dt><dd>Mobile &amp; web</dd></div>
+          <div><dt>Built with</dt><dd>React Native, Expo, Supabase</dd></div>
+        </dl>
+      </div>
+      <section class="project-section" aria-labelledby="shared-model-title">
+        <div class="engineering-copy">
+          <h2 id="shared-model-title">Tasks, calendar, and context</h2>
+          <p class="work-description">Tasks and events share a calendar without losing their different semantics: a task can be completed, an event occupies time, and an all-day item belongs to a date rather than a time slot.</p>
+          <p class="work-description">Typed Supabase queries and React Query mutation invalidation keep the task list and calendar backed by the same persisted records. React Native and Expo provide the application foundation for mobile and web, rather than treating the web companion as a separate product.</p>
+        </div>
+        <div class="project-gallery engineering-gallery project-gallery-staggered">
+          <figure class="project-clip project-clip-wide">
+            <figcaption><strong>Different views of the same schedule.</strong>Switching calendar perspectives without changing the underlying tasks and events.</figcaption>
+            <video controls muted playsinline preload="none" width="1440" height="1000" poster="/static/media/projects/spunto/posters/03-calendar-perspectives.webp" aria-label="Spunto calendar views demonstration">
+              <source src="/static/media/projects/spunto/videos/03-calendar-perspectives.mp4" type="video/mp4">
+              <source src="/static/media/projects/spunto/videos/03-calendar-perspectives.webm" type="video/webm">
+              <a href="/static/media/projects/spunto/videos/03-calendar-perspectives.mp4">Download the calendar recording.</a>
+            </video>
+          </figure>
+          <figure class="project-shot">
+            <figcaption><strong>Keep the context with the work.</strong>Project notes combine rich text and checklists, with Supabase-backed records scoped to the same project list as the tasks.</figcaption>
+            <div class="project-shot-frame">
+              <img src="/static/media/projects/spunto/screenshots/04-rich-project-notes.webp" alt="A Spunto project note with headings, nested lists, and an interactive launch checklist." width="2240" height="1540" loading="lazy">
+            </div>
+          </figure>
+          <figure class="project-shot">
+            <figcaption><strong>Progress grounded in calendar dates.</strong>Habit completions store the selected date separately from the creation timestamp. A unique habit-and-date constraint keeps check-ins, history, and statistics consistent without UTC date shifts.</figcaption>
+            <div class="project-shot-frame">
+              <img src="/static/media/projects/spunto/screenshots/09-habit-progress.webp" alt="Habit check-ins on a monthly calendar with streak statistics and a weekly progress chart." width="2240" height="1540" loading="lazy">
+            </div>
+          </figure>
+          <figure class="project-shot project-shot-portrait">
+            <figcaption><strong>A focused daily view.</strong>Tasks, projects, and habits remain accessible in the responsive web layout.</figcaption>
+            <div class="project-shot-frame">
+              <img src="/static/media/projects/spunto/screenshots/14-mobile-today.webp" alt="Spunto's responsive Today view with tasks grouped by project and a habits summary." width="780" height="1688" loading="lazy">
+            </div>
+          </figure>
+          <figure class="project-shot project-shot-portrait">
+            <figcaption><strong>A calendar that fits.</strong>All-day tasks and timed events stay distinct in the mobile day view.</figcaption>
+            <div class="project-shot-frame">
+              <img src="/static/media/projects/spunto/screenshots/15-mobile-calendar.webp" alt="Spunto's mobile day calendar with all-day tasks and timed events." width="780" height="1688" loading="lazy">
+            </div>
+          </figure>
+        </div>
+      </section>
+      <p class="project-media-note">Demo content is fictional.</p>
+      <nav class="project-navigation" aria-label="Project navigation">
+        <a class="text-link" href="/#personal-projects"><span aria-hidden="true">&larr;</span> All projects</a>
+        <a class="next-project" href="/projects/pocketchange/">
+          <span class="eyebrow">Next project</span>
+          <span class="next-project-title">PocketChange <span aria-hidden="true">&nearr;</span></span>
+        </a>
+      </nav>
+    </main>
+    <footer class="site-footer page-width">
+      <span>&copy; Quinn Bischoff</span>
+      <span>Thoughtfully built. Always learning.</span>
+    </footer>
+  </body>
+</html>

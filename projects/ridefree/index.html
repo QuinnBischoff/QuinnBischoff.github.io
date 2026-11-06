@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RideFree | Quinn Bischoff</title>
+    <meta name="description" content="The engineering behind RideFree: Web Bluetooth trainer control, ride lifecycle management, and workout visualization in the browser.">
+    <meta name="theme-color" content="#faf9f6">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quinnbischoff.github.io/projects/ridefree/">
+    <meta property="og:title" content="RideFree | Quinn Bischoff">
+    <meta property="og:description" content="Indoor training, on your terms.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="RideFree | Quinn Bischoff">
+    <meta name="twitter:description" content="Indoor training, on your terms.">
+    <link rel="canonical" href="https://quinnbischoff.github.io/projects/ridefree/">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg?v=qb-2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=qb-2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=qb-2">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=qb-2">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/static/css/portfolio.css">
+    <script src="/static/js/project-navigation.js"></script>
+    <script src="/static/js/project-videos.js" defer></script>
+  </head>
+  <body class="project-ridefree">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header page-width">
+      <a class="wordmark" href="/" aria-label="Quinn Bischoff, home">Quinn Bischoff<span aria-hidden="true">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="/#personal-projects">All projects</a>
+        <a class="contact-link" href="/#contact">Let's connect <span aria-hidden="true">&nearr;</span></a>
+      </nav>
+    </header>
+    <main class="project-main page-width" id="main">
+      <a class="text-link project-back" href="/#personal-projects"><span aria-hidden="true">&larr;</span> All projects</a>
+      <div class="project-hero">
+        <header class="project-intro">
+          <p class="eyebrow">Personal project &middot; Indoor cycling</p>
+          <h1>RideFree</h1>
+          <p class="project-lead">Indoor training, on your terms.</p>
+          <p class="project-summary">An indoor cycling app connecting a React interface to smart-trainer hardware through Web Bluetooth. Workout timing, target power, device measurements, and ride controls come together in a browser-based training experience.</p>
+        </header>
+        <div class="project-visual">
+          <div class="project-clip project-demo-cover">
+            <video controls muted playsinline preload="none" width="1600" height="1000" poster="/static/media/projects/ridefree/posters/01-live-interval-transition.webp" aria-label="RideFree workout interval transition with simulated telemetry">
+              <source src="/static/media/projects/ridefree/videos/01-live-interval-transition.mp4" type="video/mp4">
+              <source src="/static/media/projects/ridefree/videos/01-live-interval-transition.webm" type="video/webm">
+              <a href="/static/media/projects/ridefree/videos/01-live-interval-transition.mp4">Download the interval transition recording.</a>
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="project-overview">
+        <dl class="project-facts">
+          <div><dt>Platform</dt><dd>Web</dd></div>
+          <div><dt>Built with</dt><dd>React, Firebase, Web Bluetooth</dd></div>
+        </dl>
+      </div>
+      <section class="project-section" aria-labelledby="device-control-title">
+        <div class="engineering-copy">
+          <h2 id="device-control-title">From browser UI to trainer control</h2>
+          <p class="work-description">The device layer uses Web Bluetooth to subscribe to cycling-power measurements and send target-power commands through the Fitness Machine Control Point. That means decoding binary notifications and encoding watt targets, not just displaying a timer.</p>
+          <p class="work-description">The ride lifecycle handles pause, resume, interval skips, and intensity changes. Completion keeps the trainer connected for cooldown; leaving an active ride asks for confirmation before disconnecting. These transitions matter as much as the happy path when software controls hardware.</p>
+        </div>
+        <figure class="project-shot engineering-gallery">
+          <figcaption><strong>The ride control loop, on screen.</strong>Interval targets, live measurements, ride controls, and the power profile share the desktop ride view, shown with simulated telemetry.</figcaption>
+          <div class="project-shot-frame">
+            <img src="/static/media/projects/ridefree/screenshots/01-hero-live-ride-dark.webp" alt="RideFree's desktop ride view with interval targets, live power, cadence, heart rate, and a workout power profile. Telemetry is simulated." width="2240" height="1400" loading="lazy">
+          </div>
+        </figure>
+      </section>
+      <section class="project-section" aria-labelledby="workout-model-title">
+        <div class="engineering-copy">
+          <h2 id="workout-model-title">Turning workout stages into a ride</h2>
+          <p class="work-description">A structured workout has to make sense in the editor, the preview chart, and during execution. Stages describe duration and target power, while intensity adjustments scale targets across both work and recovery intervals.</p>
+          <p class="work-description">The power profile renders ramps continuously and changes color at the exact power-zone boundaries. The editor makes those details visible as stages are changed, repeated, and reordered, so the preview communicates the workout before a trainer is connected.</p>
+        </div>
+        <div class="project-gallery engineering-gallery project-gallery-staggered">
+          <figure class="project-clip project-clip-wide">
+            <figcaption><strong>The workout model, visualized.</strong>Editing targets and rearranging stages updates the power profile alongside the controls.</figcaption>
+            <video controls muted playsinline preload="none" width="1600" height="1000" poster="/static/media/projects/ridefree/posters/04-edit-repeat-and-reorder.webp" aria-label="RideFree workout editing demonstration">
+              <source src="/static/media/projects/ridefree/videos/04-edit-repeat-and-reorder.mp4" type="video/mp4">
+              <source src="/static/media/projects/ridefree/videos/04-edit-repeat-and-reorder.webm" type="video/webm">
+              <a href="/static/media/projects/ridefree/videos/04-edit-repeat-and-reorder.mp4">Download the workout editing recording.</a>
+            </video>
+          </figure>
+          <figure class="project-shot">
+            <figcaption><strong>Inspect the workout before connecting.</strong>Duration filters and compact power-profile previews make the catalog useful before a ride starts.</figcaption>
+            <div class="project-shot-frame">
+              <img src="/static/media/projects/ridefree/screenshots/02-workout-discovery.webp" alt="RideFree workout search with duration filters and color-coded power profiles." width="2240" height="1400" loading="lazy">
+            </div>
+          </figure>
+          <figure class="project-shot">
+            <figcaption><strong>From individual sessions to a training plan.</strong>Plan cards expose ride counts, weekly training time, and difficulty alongside the workout-building flow.</figcaption>
+            <div class="project-shot-frame">
+              <img src="/static/media/projects/ridefree/screenshots/03-training-plans.webp" alt="Multi-week training plan cards showing ride counts, weekly time, and difficulty." width="2240" height="1400" loading="lazy">
+            </div>
+          </figure>
+          <figure class="project-shot project-shot-mobile">
+            <figcaption><strong>The ride interface, adapted.</strong>Power, cadence, heart rate, and ride controls in the responsive portrait layout, shown with simulated telemetry.</figcaption>
+            <div class="project-shot-frame">
+              <img src="/static/media/projects/ridefree/screenshots/11-mobile-live-ride.webp" alt="RideFree's responsive portrait ride view with power, cadence, heart rate, and ride controls. Telemetry is simulated." width="860" height="1864" loading="lazy">
+            </div>
+          </figure>
+        </div>
+      </section>
+      <p class="project-media-note">Demo rider settings are fictional; ride telemetry is simulated.</p>
+      <nav class="project-navigation" aria-label="Project navigation">
+        <a class="text-link" href="/#personal-projects"><span aria-hidden="true">&larr;</span> All projects</a>
+        <a class="next-project" href="/projects/spunto/">
+          <span class="eyebrow">Next project</span>
+          <span class="next-project-title">Spunto <span aria-hidden="true">&nearr;</span></span>
+        </a>
+      </nav>
+    </main>
+    <footer class="site-footer page-width">
+      <span>&copy; Quinn Bischoff</span>
+      <span>Thoughtfully built. Always learning.</span>
+    </footer>
+  </body>
+</html>

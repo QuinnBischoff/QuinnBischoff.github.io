@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PocketChange | Quinn Bischoff</title>
+    <meta name="description" content="The engineering behind PocketChange: an Electron desktop app with local XLSX persistence, a database abstraction, and financial data modeling.">
+    <meta name="theme-color" content="#faf9f6">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quinnbischoff.github.io/projects/pocketchange/">
+    <meta property="og:title" content="PocketChange | Quinn Bischoff">
+    <meta property="og:description" content="A clearer view of your money.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PocketChange | Quinn Bischoff">
+    <meta name="twitter:description" content="A clearer view of your money.">
+    <link rel="canonical" href="https://quinnbischoff.github.io/projects/pocketchange/">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg?v=qb-2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=qb-2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=qb-2">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=qb-2">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/static/css/portfolio.css">
+    <script src="/static/js/project-navigation.js"></script>
+  </head>
+  <body class="project-pocketchange">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header page-width">
+      <a class="wordmark" href="/" aria-label="Quinn Bischoff, home">Quinn Bischoff<span aria-hidden="true">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="/#personal-projects">All projects</a>
+        <a class="contact-link" href="/#contact">Let's connect <span aria-hidden="true">&nearr;</span></a>
+      </nav>
+    </header>
+    <main class="project-main page-width" id="main">
+      <a class="text-link project-back" href="/#personal-projects"><span aria-hidden="true">&larr;</span> All projects</a>
+      <div class="project-hero">
+        <header class="project-intro">
+          <p class="eyebrow">Personal project &middot; Personal finance</p>
+          <h1>PocketChange</h1>
+          <p class="project-lead">A clearer view of your money.</p>
+          <p class="project-summary">A local-first Electron app for tracking net worth, understanding spending, and planning investments. An XLSX-backed database and shared financial model turn records stored on your device into useful analysis.</p>
+        </header>
+        <div class="project-visual">
+          <div class="media-placeholder project-cover capture-stage">
+            <img src="/static/media/projects/pocketchange/screenshots/01-net-worth-overview.webp" srcset="/static/media/projects/pocketchange/screenshots/01-net-worth-overview-small.webp 960w, /static/media/projects/pocketchange/screenshots/01-net-worth-overview.webp 2240w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1000px) calc((100vw - 168px) / 2), 512px" alt="PocketChange's net-worth overview with a twelve-month balance and percentage-change chart using fictional financial data." width="2240" height="1565">
+          </div>
+        </div>
+      </div>
+      <div class="project-overview">
+        <dl class="project-facts">
+          <div><dt>Platform</dt><dd>Desktop</dd></div>
+          <div><dt>Built with</dt><dd>Electron, JavaScript, HTML &amp; CSS</dd></div>
+        </dl>
+      </div>
+      <section class="project-section engineering-section" aria-labelledby="balances-title">
+        <div class="engineering-copy">
+          <h2 id="balances-title">From account balances to the bigger picture</h2>
+          <p class="work-description">The net-worth overview shows the total; account composition explains what changed beneath it. Cash, investments, and debt remain visible as separate parts of the same history rather than disappearing into a single balance.</p>
+          <p class="work-description">The data model stores dated account balances separately from individual transactions and current investment holdings. That distinction lets the interface show how account values evolve without treating today's holdings as a historical record.</p>
+        </div>
+        <figure class="project-shot">
+          <figcaption><strong>See where the change comes from.</strong>A stacked account history reveals how each account contributes to net worth over time.</figcaption>
+          <div class="project-shot-frame">
+            <img src="/static/media/projects/pocketchange/screenshots/05-account-composition.webp" alt="A stacked area chart showing how six accounts contribute to net worth over twelve months." width="2240" height="895" loading="lazy">
+          </div>
+        </figure>
+      </section>
+      <section class="project-section" aria-labelledby="spending-title">
+        <div class="engineering-copy">
+          <h2 id="spending-title">Understand a month. Compare the pattern.</h2>
+          <p class="work-description">Daily spending and category breakdowns answer different questions from a multi-month comparison. The interface provides both: a detailed view of one month and a longer view of income, spending, and savings, with category filters and mean and median statistics.</p>
+          <p class="work-description">Both views use the same database-backed definition of liquid income. Category settings determine which income counts toward liquid savings, so the calculation stays consistent across breakdowns and comparisons instead of being redefined by each chart.</p>
+        </div>
+        <div class="project-gallery engineering-gallery project-gallery-aligned">
+          <figure class="project-shot">
+            <figcaption><strong>The detail behind one month.</strong>Income, spending, and savings totals alongside daily activity and category-level spending.</figcaption>
+            <div class="project-shot-frame">
+              <img src="/static/media/projects/pocketchange/screenshots/03-monthly-spending.webp" alt="Monthly income, spending, and savings totals above daily and category-level spending charts." width="2240" height="1302" loading="lazy">
+            </div>
+          </figure>
+          <figure class="project-shot">
+            <figcaption><strong>One month in context.</strong>Compare six months and filter categories to distinguish recurring patterns from individual purchases.</figcaption>
+            <div class="project-shot-frame">
+              <img src="/static/media/projects/pocketchange/screenshots/04-monthly-comparison.webp" alt="Six-month income, spending, and savings comparison with category filters and mean and median statistics." width="2240" height="1472" loading="lazy">
+            </div>
+          </figure>
+        </div>
+      </section>
+      <section class="project-section" aria-labelledby="storage-title">
+        <div class="engineering-copy">
+          <h2 id="storage-title">A workbook behind a database interface</h2>
+          <p class="work-description">Transactions, accounts, balances, and investment holdings live in separate sheets of a local XLSX workbook. The application accesses them through a database abstraction with entity validation and relationship handling, rather than coupling each screen to spreadsheet operations.</p>
+          <p class="work-description">Electron's preload bridge exposes specific IPC operations for file selection and database access. This keeps the renderer focused on the interface while the desktop layer handles local files, and leaves room to replace the storage implementation without redesigning every view.</p>
+        </div>
+        <div class="project-gallery engineering-gallery project-gallery-aligned">
+          <figure class="project-shot">
+            <figcaption><strong>Work with the source records.</strong>Search, filter, and edit the transactions behind the charts by date, account, category, and type.</figcaption>
+            <div class="project-shot-frame">
+              <img src="/static/media/projects/pocketchange/screenshots/10-transaction-workspace.webp" alt="A searchable transaction workspace with date, account, category, and type filters and inline editing." width="2240" height="1433" loading="lazy">
+            </div>
+          </figure>
+          <figure class="project-shot">
+            <figcaption><strong>Inspectable local persistence.</strong>The same records live in an ordinary workbook rather than an opaque hosted database.</figcaption>
+            <div class="project-shot-frame">
+              <img src="/static/media/projects/pocketchange/screenshots/11-xlsx-database.webp" alt="A macOS Quick Look preview of the local XLSX database's Transactions sheet and sample rows." width="1809" height="977" loading="lazy">
+            </div>
+          </figure>
+        </div>
+      </section>
+      <section class="project-section engineering-section" aria-labelledby="financial-model-title">
+        <div class="engineering-copy">
+          <h2 id="financial-model-title">Financial rules beneath the charts</h2>
+          <p class="work-description">Holdings connect accounts to assets with explicit valuation rules: shares multiplied by price determine value when both are supplied. Accounts and assets cannot be deleted while holdings still reference them, keeping the relationships behind the analysis intact.</p>
+          <p class="work-description">Allocation targets are scoped to either an account or the whole portfolio and normalized into weights when read. The contribution planner builds on those holdings and targets to show how proposed purchases would change the allocation before a plan is applied.</p>
+        </div>
+        <figure class="project-shot">
+          <figcaption><strong>A model you can reason about.</strong>Current weights, targets, and projected drift make a proposed contribution's effect explicit.</figcaption>
+          <div class="project-shot-frame">
+            <img src="/static/media/projects/pocketchange/screenshots/08-contribution-planner.webp" alt="A contribution planner comparing current investment weights, proposed purchases, targets, and projected drift. The proposed plan is not applied." width="2240" height="1596" loading="lazy">
+          </div>
+        </figure>
+      </section>
+      <p class="project-media-note">Demo data is synthetic; investment prices are illustrative.</p>
+      <nav class="project-navigation" aria-label="Project navigation">
+        <a class="text-link" href="/#personal-projects"><span aria-hidden="true">&larr;</span> All projects</a>
+        <a class="next-project" href="/projects/ridefree/">
+          <span class="eyebrow">Next project</span>
+          <span class="next-project-title">RideFree <span aria-hidden="true">&nearr;</span></span>
+        </a>
+      </nav>
+    </main>
+    <footer class="site-footer page-width">
+      <span>&copy; Quinn Bischoff</span>
+      <span>Thoughtfully built. Always learning.</span>
+    </footer>
+  </body>
+</html>
