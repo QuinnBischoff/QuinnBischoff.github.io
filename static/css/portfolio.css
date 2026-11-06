@@ -60,10 +60,8 @@ h1 { font-size: clamp(48px, 5.6vw, 76px); line-height: 1.1; letter-spacing: -3px
 .project-rally { --project-tone: #ffffff; }
 .media-placeholder { width: 100%; aspect-ratio: 16 / 10; border: 1px solid #00000008; border-radius: 16px; background: var(--project-tone, #f0efe9); }
 .project-showcases { display: grid; gap: 72px; padding: 0; margin: 48px 0 0; list-style: none; }
-.project-showcase { min-width: 0; width: 100%; }
-.project-showcase:first-child { width: 80%; }
-.project-showcase:nth-child(2) { width: 86%; justify-self: end; }
-.project-showcase:nth-child(3) { width: 92%; }
+.project-showcase { min-width: 0; width: 80%; }
+.project-showcase:nth-child(2) { justify-self: end; }
 .showcase-link { display: block; text-decoration: none; border-radius: 16px; }
 .showcase-media { aspect-ratio: auto; padding: 12px; transition: box-shadow 180ms; }
 .showcase-link:hover .showcase-media { box-shadow: 0 8px 28px -14px #24282430; }
@@ -207,7 +205,7 @@ h1 { font-size: clamp(48px, 5.6vw, 76px); line-height: 1.1; letter-spacing: -3px
   .work-card h3 { order: -1; margin-bottom: 20px; }
   .work-card-image { margin-bottom: 20px; }
   .project-showcases { gap: 48px; margin-top: 32px; }
-  .project-showcase:first-child, .project-showcase:nth-child(2), .project-showcase:nth-child(3) { width: 100%; }
+  .project-showcase { width: 100%; }
   .showcase-caption { align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px; }
   .showcase-caption h3 { font-size: 32px; }
   .showcase-action { margin-top: 4px; }
